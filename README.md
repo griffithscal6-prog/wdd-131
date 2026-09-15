@@ -1,2 +1,2 @@
 # WDD-131
-https://github.com/griffithscal6-prog/WDD-131.git
+https://griffithscal6-prog.github.io/WDD-131/
