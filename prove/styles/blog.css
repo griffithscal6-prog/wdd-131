@@ -1,0 +1,164 @@
+
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #222;
+    padding: 5px;
+}
+
+/* ---------- Container ---------- */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+/* ---------- Header ---------- */
+
+header {
+    grid-area: header;
+    border-bottom: 1px solid #d8b17a;
+    text-align: center;
+}
+
+header h1 {
+    padding: 18px;
+    font-family: Georgia, serif;
+    color: #392339;
+    font-size: 1.6rem;
+}
+
+nav {
+    border-top: 1px solid #d8b17a;
+    padding: 12px;
+}
+
+.main-nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 75px);
+    justify-content: end;
+}
+
+nav a {
+    text-decoration: none;
+    color: #990000;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+/* ---------- Main and Book Reviews ---------- */
+
+main {
+    grid-area: main;
+    padding: 20px 0;
+}
+
+.book-review {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 35px;
+}
+
+.details {
+    padding: 12px 20px;
+    text-align: right;
+    border-bottom: 1px solid #d8b17a;
+}
+
+.details p {
+    margin: 12px 0;
+}
+
+.stars {
+    color: #e6a000;
+    font-size: 18px;
+}
+
+.book-content {
+    padding: 20px;
+    min-width: 0;
+}
+
+.book-content h2 {
+    color: #990000;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+    font-size: 1.25rem;
+}
+
+.book-content img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.book-content p {
+    max-width: 500px;
+    line-height: 1.4;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    grid-area: footer;
+    border-top: 1px solid #d8b17a;
+    text-align: center;
+    padding: 16px;
+}
+
+/* ---------- Desktop Layout ---------- */
+
+@media (min-width: 768px) {
+    .book-review {
+        grid-template-columns: 220px minmax(0, 1fr);
+        margin-bottom: 30px;
+    }
+
+    .details {
+        border-bottom: none;
+        border-right: 1px solid #d8b17a;
+        padding: 0 30px;
+        text-align: right;
+    }
+
+    .book-content {
+        padding: 15px 30px;
+    }
+
+    .book-content img {
+        max-height: 350px;
+    }
+
+    .book-content h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* ---------- Keyboard Accessibility ---------- */
+
+a:focus-visible {
+    outline: 2px solid #990000;
+    outline-offset: 3px;
+}
