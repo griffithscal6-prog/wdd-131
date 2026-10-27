@@ -9,7 +9,7 @@ function updateNotesField() {
   const value = travelRange.value;
 
   // Show the travel notes on the form if they are choosing many campuses
-  if (value === "many") {
+  if (value === "Many Campuses") {
     notesContainer.hidden = false;
     notes.required = true;
   } else {
