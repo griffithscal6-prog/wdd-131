@@ -17,7 +17,7 @@ function updateNotesField() {
     notes.required = false;
     notes.value = "";
   }
-}
+} 
 
 travelRange.addEventListener("change", updateNotesField);
 updateNotesField();
